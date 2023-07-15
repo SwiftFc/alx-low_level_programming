@@ -1,6 +1,6 @@
-#include <stdlib>
-#include <time>
-#include <stdio>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
 /**
  * main - Determine the last digit of a number
