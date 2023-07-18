@@ -1,3 +1,3 @@
-C - Functions, nested loops
+<h1>C - Functions, nested loops</h1>
 
-Todays lesson is about fuctions and nested loops
+<h3>Todays lesson is about fuctions and nested loops</h3>
