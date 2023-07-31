@@ -2,7 +2,7 @@
 
 /**
  * *_strchr - a program that locates a character in a string
- * @s: string 
+ * @s: string
  * @c: character
  * Return: NULL if the character is not found
  */
@@ -13,9 +13,10 @@ char *_strchr(char *s, char c)
 	{
 		if (*s == c)
 		{
-			return s;
+			return (s);
 		}
 		s++;
 	}
-	return NULL;
+
+	return (NULL);
 }
