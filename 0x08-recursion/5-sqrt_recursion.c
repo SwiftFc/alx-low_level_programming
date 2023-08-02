@@ -8,14 +8,15 @@
  */
 int _sqrt_help(int n, int x)
 {
-	if (x * x <= n)
+	if (x * x == n)
 	{
 		return (x);
 	}
-	else
+	else if (x * x > n)
 	{
-		return (_sqrt_help(n, x - 1));
+		return (-1);
 	}
+	return (_sqrt_help(n, x + 1));
 }
 
 
@@ -29,13 +30,9 @@ int _sqrt_help(int n, int x)
 
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
+	if (n == 0)
 	{
-	return (-1);
+	return (0);
 	}
-	if (n == 1)
-	{
-	return (1);
-	}
-	return (_sqrt_help(n, n - 1));
+	return (_sqrt_help(n,1));
 }
