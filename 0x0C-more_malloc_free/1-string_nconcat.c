@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * *string_nconcat - a function that concatenates two strings
- * @s1: first string
- * @s2: second string
- * @n: byte to be allocate @s2
- * Return: a pointer to allocated space in memory,
- * NULL if it fails
+ * string_nconcat - a function to concatenate 2 strings,
+ * only n bytes of s2
+ * @s1: string 1
+ * @s2: string 2
+ * @n: bytes to include of s2
+ * Return: pointer to malloc memory, else NULL if it fails
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	int strlen1, x, y;
+	unsigned int strlen1, x, y;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -23,7 +23,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc((strlen1 + n + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-	for (x = 0, y = 0; x < strlen1; x++)
+	for (x = 0, y = 0; x < (strlen1 + n); x++)
 	{
 		if (x < strlen1)
 			ptr[x] = s1[x];
@@ -35,12 +35,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	return (ptr);
 }
 
-
-
 /**
- * _strlen - a function to find the length of string
+ * _strlen - a function to find the length of the string
  * @s: string to be used
- * Return: length of string
+ * Return: length of the string
  */
 
 int _strlen(char *s)
