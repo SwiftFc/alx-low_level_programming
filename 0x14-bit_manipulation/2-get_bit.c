@@ -20,5 +20,5 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	bitmask = 1UL << index;
 
-	return (n & bitmask) ? 1 : 0;
+	return ((n & bitmask) ? 1 : 0);
 }
