@@ -7,10 +7,8 @@
  * @filename: A pointer to a string representing the file to read
  * Return: The actual number of letters it could read and print
  * if file fails to open or read, return 0, if "filename" is NULL,
- * return 0, if "write" fails to write expected amount of bytes,
- * return 0
+ * return 0, if "write" fails to write amount of bytes return 0
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buffer = malloc(letters);
