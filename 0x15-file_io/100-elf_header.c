@@ -146,7 +146,7 @@ void print_magic(char *pt)
 {
 	int bytes;
 
-	printf("  Magic:  ");
+	printf("  Magic:   ");
 
 	for (bytes = 0; bytes < 16; bytes++)
 		printf(" %02x", pt[bytes]);
