@@ -238,7 +238,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if(!find_elf(pt))
+	if (!find_elf(pt))
 	{
 		dprintf(STDERR_FILENO, "Err: It is not an ELF\n");
 		exit(98);
