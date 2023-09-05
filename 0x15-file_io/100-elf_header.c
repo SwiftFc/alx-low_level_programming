@@ -77,7 +77,7 @@ void print_type(char *pt)
 	else if (type == 4)
 		printf("CORE (Core file)\n");
 	else
-		printf("uknown: %x>\n", type);
+		printf("<uknown: %x>\n", type);
 }
 
 /**
@@ -99,7 +99,7 @@ void print_osabi(char *pt)
 	else if (osabi == 6)
 		printf("UNIX - Solaris\n");
 	else
-		printf("unknown: %x>\n", osabi);
+		printf("<unknown: %x>\n", osabi);
 	printf("  ABI Version:                       %d\n", pt[8]);
 }
 
@@ -235,6 +235,12 @@ int main(int argc, char *argv[])
 	if (ret_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Err: The file can not be read\n");
+		exit(98);
+	}
+
+	if(!find_elf(pt))
+	{
+		dprintf(STDERR_FILENO, "Err: It is not an ELF\n");
 		exit(98);
 	}
 
