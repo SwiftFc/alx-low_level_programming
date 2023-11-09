@@ -11,15 +11,13 @@
  * @n: integer
  * @next: points to the next node
  * @prev: points to the previous node
- *
  * Description: singly linked list node structure
  */
 
 typedef struct listint_s
 {
 	int n;
-	struct listint_s *next;
-	struct listint_s *prev;
+	struct listint_s *next, *prev;
 } dlistint_t;
 
 /* Functions Prototypes Included Here*/
