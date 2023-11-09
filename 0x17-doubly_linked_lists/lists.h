@@ -5,6 +5,23 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+/**
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ * @prev: points to the previous node
+ *
+ * Description: singly linked list node structure
+ */
+
+typedef struct listint_s
+{
+	int n;
+	struct listint_s *next;
+	struct listint_s *prev;
+} dlistint_t;
+
 /* Functions Prototypes Included Here*/
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
