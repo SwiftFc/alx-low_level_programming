@@ -1,0 +1,4 @@
+# A Makefile that runs the file school
+
+all : school.c main.c
+	gcc -Wall -Werror -Wextra -pedantic -std=gnu89 school.c main.c -o school
