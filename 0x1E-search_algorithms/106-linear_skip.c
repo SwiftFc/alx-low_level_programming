@@ -1,5 +1,6 @@
 #include "search_algos.h"
 
+
 /**
  * linear_skip - Searches for an algorithm in a sorted singly
  *               linked list of integers using linear skip.

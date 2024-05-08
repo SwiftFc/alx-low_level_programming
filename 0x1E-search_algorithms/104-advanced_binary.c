@@ -1,5 +1,6 @@
 #include "search_algos.h"
 
+
 /**
  * advanced_binary_recursive - Recursive binary search algorithm
  * @array: Pointer to the first element of the [sub]array to search in
